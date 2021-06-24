@@ -1,0 +1,16 @@
+{
+  "name": "threejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "three": "^0.129.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config webpack.config.js --progress"
+  },
+  "author": "",
+  "license": "ISC"
+}
