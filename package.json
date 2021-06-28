@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --config webpack.config.js --progress"
+    "start": "webpack serve --config webpack.config.js --progress",
+    "build": "webpack --config webpack.config.js"
   },
   "author": "",
   "license": "ISC"

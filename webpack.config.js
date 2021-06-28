@@ -4,9 +4,13 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './index.js',
+  entry: {
+    main: './index.js',
+    'house-road-1': './HouseAndRoad1/index.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: 'js/[name]/[name]-bundle.js'
   },
   devServer: {
     contentBase: './dist'
@@ -14,7 +18,14 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Development'
+      title: 'Development',
+      chunks: ['main'],
+      filename: 'main.html'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'HouseAndRoad1',
+      chunks: ['house-road-1'],
+      filename: 'house-road-1.html'
     })
   ],
 };
